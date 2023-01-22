@@ -1,9 +1,12 @@
 import React from 'react';
 
-export default function LastBlank({ radioTypeValue, setRadioTypeValue }) {
+export default function LastBlank({ radioTypeValue, setRadioTypeValue, options, setOptions }) {
   const handleOnChange = e => {
     setRadioTypeValue(e.target.value);
-    console.log(radioTypeValue);
+  };
+
+  const optionChangeHandler = e => {
+    setOptions(e.target.value);
   };
 
   return (
@@ -49,14 +52,26 @@ export default function LastBlank({ radioTypeValue, setRadioTypeValue }) {
           </label>
         </form>
 
-       
         <div className='select'>
           <label for='cars'>Choose a car:</label>
-          <select id='cars' name='carlist' form='carform'>
-            <option value='volvo'>Volvo</option>
-            <option value='saab'>Saab</option>
-            <option value='opel'>Opel</option>
-            <option value='audi'>Audi</option>
+          <select
+            value={options}
+            onChange={optionChangeHandler}
+            id='cars'
+            name='carlist'
+            form='carform'>
+            <option checked={options === 'volvo'} value='volvo'>
+              Volvo
+            </option>
+            <option checked={options === 'mersedes'} value='mersedes'>
+              Mersedes
+            </option>
+            <option checked={options === 'opel'} value='opel'>
+              Opel
+            </option>
+            <option checked={options === 'audi'} value='audi'>
+              Audi
+            </option>
           </select>
         </div>
       </div>

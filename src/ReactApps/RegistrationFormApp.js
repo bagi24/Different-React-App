@@ -19,9 +19,8 @@ export default function RegistrationFormApp() {
   const [textValue, setTextValue] = useState('');
 
   const [radioTypeValue, setRadioTypeValue] = useState('HTML');
-  
 
-  
+  const [options, setOptions] = useState('volvo');
 
   useEffect(() => {
     setPage(`page-${activePage}`);
@@ -75,7 +74,8 @@ export default function RegistrationFormApp() {
         <LastBlank
           setRadioTypeValue={setRadioTypeValue}
           radioTypeValue={radioTypeValue}
-         
+          options={options}
+          setOptions={setOptions}
         />
       )}
 
@@ -90,6 +90,8 @@ export default function RegistrationFormApp() {
           setChecked1={setChecked1}
           setPhoneNum={setPhoneNum}
           setTextValue={setTextValue}
+          setRadioTypeValue={setRadioTypeValue}
+          setOptions={setOptions}
         />
       )}
 

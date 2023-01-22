@@ -10,6 +10,8 @@ export default function FormBlank3({
   setChecked1,
   setTextValue,
   setPhoneNum,
+  setOptions,
+  setRadioTypeValue,
 }) {
   const handleResetBtn = () => {
     setPage('page-1');
@@ -21,6 +23,8 @@ export default function FormBlank3({
     setChecked1(false);
     setPhoneNum('');
     setTextValue('');
+    setRadioTypeValue('');
+    setOptions('');
   };
 
   return (
