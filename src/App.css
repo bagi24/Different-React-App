@@ -1,0 +1,36 @@
+.APP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  flex-direction: column;
+}
+
+.con {
+  display: flex;
+  background-color: lightblue;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+ 
+}
+
+.link {
+  text-decoration: none;
+  margin-left: 20px;
+  color: green;
+  font-size: 20px;
+  
+}
+
+.ModalCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
