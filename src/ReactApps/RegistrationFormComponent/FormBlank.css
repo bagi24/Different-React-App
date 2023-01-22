@@ -91,3 +91,9 @@ button {
 .label {
   margin: 10px;
 }
+
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -18,10 +18,10 @@ export default function RegistrationFormApp() {
   const [phoneNum, setPhoneNum] = useState('');
   const [textValue, setTextValue] = useState('');
 
-  const [radioTypeValue, setRadioTypeValue] = useState('');
+  const [radioTypeValue, setRadioTypeValue] = useState('HTML');
   
 
-  console.log(radioTypeValue);
+  
 
   useEffect(() => {
     setPage(`page-${activePage}`);
