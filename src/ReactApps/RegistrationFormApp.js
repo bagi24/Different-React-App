@@ -22,12 +22,20 @@ export default function RegistrationFormApp() {
 
   const [options, setOptions] = useState('volvo');
 
+  const [validText, setValidText] = useState('');
+
   useEffect(() => {
     setPage(`page-${activePage}`);
   }, [activePage]);
 
   const handleNextClick = () => {
-    if (activePage < 4) {
+    if (inputValue.length === 0) {
+      setValidText('შევსება აუცილებელია');
+    } else {
+      return null;
+    } 
+
+    if (activePage < 4  && inputValue.length !== 0 ) {
       setActivePage(activePage + 1);
       console.log(activePage);
     }
@@ -55,6 +63,7 @@ export default function RegistrationFormApp() {
           setInputValue2={setInputValue2}
           inputValue2={inputValue2}
           setActivePage={setActivePage}
+          validText={validText}
         />
       )}
       {page === 'page-2' && (

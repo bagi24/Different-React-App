@@ -7,7 +7,12 @@ export default function FormBlank1({
   inputValue1,
   setInputValue2,
   inputValue2,
+  validText,
 }) {
+
+
+
+
   return (
     <div className='Blank1'>
       <label for='name'>
@@ -22,6 +27,7 @@ export default function FormBlank1({
         name='name'
         id='name'
       />
+      <div style={{color: 'red'}}> {validText} </div>
 
       <label for='surname'>
         <strong>Surname</strong>
